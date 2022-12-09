@@ -12,9 +12,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -92,11 +94,13 @@ public class landmarkRecycle extends AppCompatActivity {
                     rList = new ArrayList<>();
                     //********************************************//
 
-                    // 시간별 혼잡도
+                    // 시간별 혼잡도 : 현재 시간대로 끊어야할듯
                     int[] landmarkCongestion = new int[11]; // 9~18시
                     for (int i = 1; i <= 10; i++) {
                         landmarkCongestion[i] = (int) (Float.parseFloat(landMarkList.get(0).get(i).getLandcongestion()) * 100);
                     }
+                    //getCongestionList(landmarkCongestion);
+
 
                     rList.add(new LandMark("어린이대공원","혼잡도","시민여러분이 함게 가꾸고 즐기는 휴식공간이자 동식물이 행복하게 공존하는 생태공원입니다"
                             ,R.drawable.children,
@@ -180,7 +184,7 @@ public class landmarkRecycle extends AppCompatActivity {
 
                     // 동묘시장 : 11/27부터 데이터 모일예정 18시 이후 테스트 해보기
                     // 교통량
-                    /*car = landMarkList.get(3).get(0).getLandcar();
+                    car = landMarkList.get(3).get(0).getLandcar();
                     bus = landMarkList.get(3).get(0).getBustest();
                     truck = landMarkList.get(3).get(0).getLandtruck();
                     person = landMarkList.get(3).get(0).getLandperson();
@@ -208,7 +212,7 @@ public class landmarkRecycle extends AppCompatActivity {
                             String.valueOf(landmarkCongestion[7]),
                             String.valueOf(landmarkCongestion[8]),
                             String.valueOf(landmarkCongestion[9]),
-                            String.valueOf(landmarkCongestion[10])));*/
+                            String.valueOf(landmarkCongestion[10])));
 
                     // DDP
                     // 교통량
@@ -552,7 +556,7 @@ public class landmarkRecycle extends AppCompatActivity {
             }
         });
     }
-    private static float getRating(float rating, int congestion){
+    private float getRating(float rating, int congestion){
         if (0 <= congestion && congestion < 10){
             rating = 1f;
         } else if (10 <= congestion && congestion < 30) {
@@ -566,4 +570,50 @@ public class landmarkRecycle extends AppCompatActivity {
         }
         return rating;
     }
+    /*private String getHour() {
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat sdf = new SimpleDateFormat("H");
+
+        return sdf.format(date);
+    }
+    private String getMinute() {
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat sdf = new SimpleDateFormat("m");
+
+        return sdf.format(date);
+    }
+    private int[] getCongestionList(int[] landmarkCongestion, List<List<LandMark>> landMarkList, int index) {
+        int todayHour = Integer.parseInt(getHour());
+        int todayMinute = Integer.parseInt(getMinute());
+        if (todayHour < 9 && todayMinute < 7){ // 0시 0분 ~ 9시 6분
+            for (int i = 1; i <= 10; i++) {
+                landmarkCongestion[i] = 0;
+            }
+        }
+        else if (todayHour < 10 && todayMinute < 7){ // 9시 7분 ~ 10시 6분
+            for (int i = 1; i <= 1; i++) {
+                landmarkCongestion[1] = (int) (Float.parseFloat(landMarkList.get(index).get(i).getLandcongestion()) * 100);
+            }
+            for (int i = 2; i <= 10; i++) {
+                landmarkCongestion[i] = 0;
+            }
+        } else if (todayHour < 11 && todayMinute < 7) { // 10시 7분 ~ 11시 6분
+            for (int i = 1; i <= 2; i++) {
+                landmarkCongestion[1] = (int) (Float.parseFloat(landMarkList.get(index).get(i).getLandcongestion()) * 100);
+            }
+            for (int i = 3; i <= 10; i++) {
+                landmarkCongestion[i] = 0;
+            }
+        } else if (todayHour < 11 && todayMinute < 7) {
+            for (int i = 1; i <= 2; i++) {
+                landmarkCongestion[1] = (int) (Float.parseFloat(landMarkList.get(index).get(i).getLandcongestion()) * 100);
+            }
+            for (int i = 3; i <= 10; i++) {
+                landmarkCongestion[i] = 0;
+            }
+        }
+        return landmarkCongestion;
+    }*/
 }
