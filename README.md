@@ -20,3 +20,7 @@ Flask : local Server (port : 5000)  + RDS 연결<br>
 Flask 코드는 보안상 올리지 않음<br>
 Rest API: 시간별 혼잡도, 실시간 객체 데이터<br>
 kakao_app_key 비식별화<br>
+
+시스템 관계도<br>
+
+![캡스톤 백엔드 아키텍처](https://user-images.githubusercontent.com/70370578/206893518-7dd75908-b694-4f36-be04-da08c372bccd.png)
