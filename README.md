@@ -24,3 +24,15 @@ kakao_app_key 비식별화<br>
 시스템 관계도<br>
 
 ![캡스톤 백엔드 아키텍처](https://user-images.githubusercontent.com/70370578/206893518-7dd75908-b694-4f36-be04-da08c372bccd.png)
+
+<br> 실행 모습<br>
+<br> 시연 메인<br>
+![시연 메인](https://user-images.githubusercontent.com/70370578/207311514-ec056e24-ac6e-4c0e-a2c3-a89bfc4eb2a7.jpg)<br>
+<br> 시연 로그인<br>
+![시연 로그인](https://user-images.githubusercontent.com/70370578/207311506-67ba23ba-b171-44c4-ae83-0bce787ae29c.jpg)<br>
+<br> 기능 <br>
+![시연1](https://user-images.githubusercontent.com/70370578/207311153-989ec619-cdd9-476e-a5e8-d532c8c7b071.jpg)<br>
+![시연2](https://user-images.githubusercontent.com/70370578/207311145-a018d159-39b7-4351-8d69-ea45ba0d3723.jpg)<br>
+
+
+
