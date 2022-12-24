@@ -16,7 +16,7 @@ frontUsingBack 브랜치 <br>
 - 브랜치 병합은 보류.
 
 ## 11.20.Sun <br>
-- 플라스크 통신 완료<br>
+- 플라스크 통신 완료 : Flask + okhttp
 - build.gradle okhttp 의존성 추가<br>
 - MainActivity 2개라 하나 삭제 (login 폴더가 진짜) <br>
 
