@@ -1,32 +1,32 @@
 # Leisure Trip
 ## 2022-2 캡스톤 프로젝트
-관광지 CCTV 데이터를 사용하여 관광지 혼잡도를 나타내주는 어플리케이션<br><br>
+- 관광지 CCTV 데이터를 사용하여 관광지 혼잡도를 나타내주는 어플리케이션<br><br>
 
 # 주요기능
-실시간 혼잡도, 시간별 혼잡도(9 to 18), 차량 및 보행자 실시간 비율<br><br>
+- 실시간 혼잡도, 시간별 혼잡도(9 to 18), 차량 및 보행자 실시간 비율<br><br>
 
 
 # 진행상황<br>
-## 11.5 <br>
+## 11.5.Sat <br>
 frontUsingBack 브랜치 <br>
-카카오 로그인 구현<br>
-.gitignore에 strings.xml -> 앱키보유해서 깃이그노어 처리<br>
-@string/kakao_app_key는 kakao + 앱키를 입력해야 카카오 로그인 구동이 가능하고, 정보를 받아올수있음.<br>
+- 카카오 로그인 구현<br>
+- .gitignore에 strings.xml -> 앱키보유해서 깃이그노어 처리<br>
+- @string/kakao_app_key는 kakao + 앱키를 입력해야 카카오 로그인 구동이 가능하고, 정보를 받아올수있음.<br>
 
-브랜치 병합은 보류.
+- 브랜치 병합은 보류.
 
-## 11.20 <br>
-플라스크 통신 완료<br>
-build.gradle okhttp 의존성 추가<br>
-MainActivity 2개라 하나 삭제 (login 폴더가 진짜) <br>
+## 11.20.Sun <br>
+- 플라스크 통신 완료<br>
+- build.gradle okhttp 의존성 추가<br>
+- MainActivity 2개라 하나 삭제 (login 폴더가 진짜) <br>
 
-## 12.10 <br>
+## 12.10.Sat <br>
 최종 프로젝트 완성<br>
-Android Studio + Flask + retrofit<br>
-Flask : local Server (port : 5000)  + RDS 연결<br>
-Flask 코드는 보안상 올리지 않음<br>
-Rest API: 시간별 혼잡도, 실시간 객체 데이터<br>
-kakao_app_key 비식별화<br>
+- Android Studio + Flask + retrofit<br>
+- Flask : local Server (port : 5000)  + RDS 연결<br>
+- Flask 코드는 보안상 올리지 않음<br>
+- Rest API: 시간별 혼잡도, 실시간 객체 데이터<br>
+- kakao_app_key 비식별화<br>
 
 # 시스템 관계도<br>
 
